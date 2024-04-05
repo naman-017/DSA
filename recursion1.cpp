@@ -83,3 +83,11 @@ void reverse_array1(int arr[], int l, int r)
 	swap(arr[l], arr[r]);
 	reverse_array1(arr, l+1, r-1);
 }
+
+void reverse_array2(int arr[], int i, int n)
+{
+	if(i>=n/2)
+		return;
+	swap(arr[i], arr[n-i-1]);
+	reverse_array2(arr, i+1, n-1);
+}

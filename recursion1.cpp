@@ -50,3 +50,28 @@ void ptr(int i, int n)
 	ptr(i+1, n);
 	cout << i << endl;
 }
+
+void sum_N_terms1(int i, int sum)
+{
+	if(i<1){
+		cout << sum << endl;
+		return;
+	}
+	sum_N_terms1(i-1, sum+i);
+}
+
+int sum_N_terms2(int n)
+{
+	if(n==0)
+		return 0;
+	return n+sum_N_terms2(n-1);
+
+}
+
+int factorial(int n)
+{
+	if(n==1){
+		return 1;
+	}
+	return n*factorial(n-1);
+}

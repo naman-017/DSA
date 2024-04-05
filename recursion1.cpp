@@ -75,3 +75,11 @@ int factorial(int n)
 	}
 	return n*factorial(n-1);
 }
+
+void reverse_array1(int arr[], int l, int r)
+{
+	if(l>=r)
+		return;
+	swap(arr[l], arr[r]);
+	reverse_array1(arr, l+1, r-1);
+}

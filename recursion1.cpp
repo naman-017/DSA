@@ -1,3 +1,4 @@
+//print name N time using recursion
 void print_name(int n)
 {
 	if(n==0)
@@ -8,6 +9,7 @@ void print_name(int n)
 
 }
 
+//print 1 to N using recursion
 void print_1_to_N(int i, int n)
 {
 	if(i>n)
@@ -17,6 +19,7 @@ void print_1_to_N(int i, int n)
 	print_1_to_N(i, n);
 }
 
+//print N to 1 using recursion
 void print_N_to_1(int n)
 {
 	if(n<1)
@@ -26,6 +29,7 @@ void print_N_to_1(int n)
 	print_N_to_1(n);
 }
 
+//print 1 to N using backtrack through recursion, cant use + operator
 void print_1_to_N_backtrack(int n)
 {
 	if(n<1)
@@ -34,6 +38,7 @@ void print_1_to_N_backtrack(int n)
 	cout << n << endl;
 }
 
+//print N t 1 using backtrack through recursion, cant use - operator
 void print_N_to_1_backtrack(int i, int n)
 {
 	if(i>n)
@@ -42,11 +47,11 @@ void print_N_to_1_backtrack(int i, int n)
 	cout << i << endl;
 }
 
+//
 void ptr(int i, int n)
 {
 	if(i>n)
 		return;
-	
 	ptr(i+1, n);
 	cout << i << endl;
 }

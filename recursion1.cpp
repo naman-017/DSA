@@ -91,3 +91,23 @@ void reverse_array2(int arr[], int i, int n)
 	swap(arr[i], arr[n-i-1]);
 	reverse_array2(arr, i+1, n-1);
 }
+
+void reverse_str(string &s, int l, int r)
+{
+	if(l>=r)
+		return;
+	char temp=s[l];
+	s[l]=s[r];
+	s[r]=temp;
+	reverse_str(s, l+1, r-1);
+}
+
+bool check_palin_str(string s, int l, int n)
+{
+	if(l>=n/2)
+		return true;
+	
+	if(s[l] != s[n-l-1])
+		return false;
+	return check_palin_str(s, l+1, n);
+}

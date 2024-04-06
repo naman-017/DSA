@@ -134,5 +134,7 @@ int fibo(int n)
 {
 	if(n<=1)
 		return n;
-	return fibo(n-1)+fibo(n-2);
+	int last=n-1;
+	int slast=n-2;
+	return fibo(last)+fibo(slast);
 }

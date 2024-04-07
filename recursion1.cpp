@@ -47,7 +47,7 @@ void print_N_to_1_backtrack(int i, int n)
 	cout << i << endl;
 }
 
-//
+//print 1 to N using backtrack
 void ptr(int i, int n)
 {
 	if(i>n)
@@ -56,6 +56,7 @@ void ptr(int i, int n)
 	cout << i << endl;
 }
 
+//sum of n terms
 void sum_N_terms1(int i, int sum)
 {
 	if(i<1){
@@ -65,6 +66,7 @@ void sum_N_terms1(int i, int sum)
 	sum_N_terms1(i-1, sum+i);
 }
 
+//sum of n terms
 int sum_N_terms2(int n)
 {
 	if(n==0)
@@ -73,6 +75,7 @@ int sum_N_terms2(int n)
 
 }
 
+//factorial of nth term, for 0th term ans is 0
 int factorial(int n)
 {
 	if(n==1){
@@ -81,6 +84,7 @@ int factorial(int n)
 	return n*factorial(n-1);
 }
 
+//reverse an array using recursion
 void reverse_array1(int arr[], int l, int r)
 {
 	if(l>=r)
@@ -89,6 +93,7 @@ void reverse_array1(int arr[], int l, int r)
 	reverse_array1(arr, l+1, r-1);
 }
 
+//reverse an array using recursion
 void reverse_array2(int arr[], int i, int n)
 {
 	if(i>=n/2)
@@ -97,6 +102,7 @@ void reverse_array2(int arr[], int i, int n)
 	reverse_array2(arr, i+1, n-1);
 }
 
+//reverse an string using recursion
 void reverse_str(string &s, int l, int r)
 {
 	if(l>=r)
@@ -107,6 +113,7 @@ void reverse_str(string &s, int l, int r)
 	reverse_str(s, l+1, r-1);
 }
 
+//check for palindrome string using recursion
 bool check_palin_str(string s, int l, int n)
 {
 	if(l>=n/2)
@@ -117,6 +124,7 @@ bool check_palin_str(string s, int l, int n)
 	return check_palin_str(s, l+1, n);
 }
 
+//fibonacci array
 int main()
 {
 	//fibonacci array
@@ -135,6 +143,7 @@ int main()
 	cout << endl;
 }
 
+//fibonacci using recursion
 int fibo(int n)
 {
 	if(n<=1)

@@ -117,3 +117,21 @@ c = 1
 		cout << ch << " = " << hash[ch] << endl;
 	}
 }
+
+
+/*we can also use "map<key, value>" or "unordered_map<key, value>" from C++ STL
+map takes O(log N) time complexity for best, average and worst case
+unordered_map takes O(1) for best and average TC but O(N) for the worst case
+*/
+int n;
+cin >> n;
+vactor<int> v(n);
+unordered_map<int, int> m1;
+map<int, int> m2;
+for(int i=0; i<n; i++){
+	cin >> v[i];
+	m[v[i]]++;
+}
+for(auto it: m1){
+	cout << it.first << " -> " << it.second << endl;
+}

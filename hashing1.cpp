@@ -121,7 +121,7 @@ c = 1
 
 /*we can also use "map<key, value>" or "unordered_map<key, value>" from C++ STL
 map takes O(log N) time complexity for best, average and worst case
-unordered_map takes O(1) for best and average TC but O(N) for the worst case
+unordered_map takes O(1) for best and average TC but O(N) for the worst case - key cannot be a pair of anything for unord_map
 */
 int n;
 cin >> n;
@@ -139,7 +139,8 @@ for(auto it: m1){
 /*
 cannot create an array with size greater then 10^6 or 10^7 with in main
 hashing methods : 3 types :
-division method
+division method - we have limited size(10) - 10%2=2, 10%23=3, collisions may happen,
+		  these collisions can be handled using linear chain like in a linked list
 folding method
 mid square method
 */

@@ -45,3 +45,38 @@ int main()
 		cout << hash[x] << endl;
 	}
 }
+
+
+int main()
+{
+	/*
+abcdabehf
+5 : queries
+a
+g
+h
+b
+c
+output:
+a = 2
+g = 0
+h = 1
+b = 2
+c = 1
+
+ */
+	string s;
+	cin >> s;
+	int hash[26]={0};
+	for(int i=0; i<s.size(); i++){
+		hash[s[i]-'a']++;
+	}
+
+	int q;
+	cin >> q;
+	while(q--){
+		char ch;
+		cin >> ch;
+		cout << ch << " = " << hash[ch-'a'] << endl;
+	}
+}

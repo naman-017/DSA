@@ -135,3 +135,11 @@ for(int i=0; i<n; i++){
 for(auto it: m1){
 	cout << it.first << " -> " << it.second << endl;
 }
+
+/*
+cannot create an array with size greater then 10^6 or 10^7 with in main
+hashing methods : 3 types :
+division method
+folding method
+mid square method
+*/

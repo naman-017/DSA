@@ -120,6 +120,15 @@ string reverseWord(string str)
         
     }
 
+int largest(vector<int> &arr, int n)
+    {
+        if(arr.size()==1)
+            return arr[0];
+        int p = arr[n-1];
+        arr.pop_back();
+        return max(largest(arr, n-1),p);
+    }
+
 //check for palindrome string using recursion
 bool check_palin_str(string s, int l, int n)
 {

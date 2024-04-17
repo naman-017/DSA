@@ -168,3 +168,20 @@ int fibo(int n)
 	int slast=n-2;
 	return fibo(last)+fibo(slast);
 }
+
+
+//tower of hanoi
+long long cnt=0;
+    long long f(int n, int from, int to, int aux)
+    {
+        if(n>0){
+            f(n-1, from, aux, to);
+            cout << "move disk " << n << " from rod " << from << " to rod " << to << endl;
+            cnt++;
+            f(n-1, aux, to, from);
+        }
+    }
+    long long toh(int N, int source, int dest, int aux){
+        f(N, source, dest, aux);
+        return cnt;
+    }

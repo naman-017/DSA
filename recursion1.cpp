@@ -113,6 +113,13 @@ void reverse_str(string &s, int l, int r)
 	reverse_str(s, l+1, r-1);
 }
 
+string reverseWord(string str)
+    {
+       if(str.size() == 0 || str.size()== 1) return str;
+       return reverseWord(str.substr(1)) + str[0];
+        
+    }
+
 //check for palindrome string using recursion
 bool check_palin_str(string s, int l, int n)
 {

@@ -115,7 +115,8 @@ void reverse_str(string &s, int l, int r)
 
 string reverseWord(string str)
     {
-       if(str.size() == 0 || str.size()== 1) return str;
+       if(s=="")
+		return "";
        return reverseWord(str.substr(1)) + str[0];
         
     }

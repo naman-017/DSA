@@ -140,6 +140,14 @@ bool check_palin_str(string s, int l, int n)
 		return false;
 	return check_palin_str(s, l+1, n);
 }
+bool check_palindrome(string s, int i)
+{
+	if(s.size()==0 || s.size()==1)
+		return true;
+	if(s[0]==s[s.size()-1])
+		return check(s.substr(i, s.size()-2), i+1);
+	return false;
+}
 
 //fibonacci array
 int main()
